@@ -1,0 +1,2 @@
+INSERT INTO CLIENTE(NOME_COMPLETO, EMAIL, SENHA, DATA_CRIACAO) VALUES ('Teste', 'teste', 'teste', NOW());
+/*SELECT all();*/

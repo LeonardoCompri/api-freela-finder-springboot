@@ -18,7 +18,16 @@ import javax.persistence.OneToMany;
 import com.freefinder.api.enums.StatusProjeto;
 import com.freefinder.api.enums.VisibilidadeProjeto;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Projeto {
 
    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -41,120 +50,4 @@ public class Projeto {
    private List<Proposta> propostas;
 
    private LocalDateTime dataCriacao = LocalDateTime.now();
-
-
-   public Long getId() {
-      return this.id;
-   }
-
-
-   public void setId(Long id) {
-      this.id = id;
-   }
-
-
-   public Cliente getCliente() {
-      return this.cliente;
-   }
-
-
-   public void setCliente(Cliente cliente) {
-      this.cliente = cliente;
-   }
-
-
-   public Freelancer getFreelancer() {
-      return this.freelancer;
-   }
-
-
-   public void setFreelancer(Freelancer freelancer) {
-      this.freelancer = freelancer;
-   }
-
-
-   public String getTitulo() {
-      return this.titulo;
-   }
-
-
-   public void setTitulo(String titulo) {
-      this.titulo = titulo;
-   }
-
-
-   public String getCategoria() {
-      return this.categoria;
-   }
-
-
-   public void setCategoria(String categoria) {
-      this.categoria = categoria;
-   }
-
-
-   public String getDescricao() {
-      return this.descricao;
-   }
-
-
-   public void setDescricao(String descricao) {
-      this.descricao = descricao;
-   }
-
-
-   public Set<Habilidade> getHabilidade() {
-      return this.habilidade;
-   }
-
-
-   public void setHabilidade(Set<Habilidade> habilidade) {
-      this.habilidade = habilidade;
-   }
-
-
-   public LocalDate getPrazoPropostas() {
-      return this.prazoPropostas;
-   }
-
-
-   public void setPrazoPropostas(LocalDate prazoPropostas) {
-      this.prazoPropostas = prazoPropostas;
-   }
-
-
-   public VisibilidadeProjeto getVisibilidade() {
-      return this.visibilidade;
-   }
-
-
-   public void setVisibilidade(VisibilidadeProjeto visibilidade) {
-      this.visibilidade = visibilidade;
-   }
-
-
-   public StatusProjeto getStatus() {
-      return this.status;
-   }
-
-
-   public void setStatus(StatusProjeto status) {
-      this.status = status;
-   }
-
-
-   public List<Proposta> getPropostas() {
-      return this.propostas;
-   }
-
-
-   public void setPropostas(List<Proposta> propostas) {
-      this.propostas = propostas;
-   }
-
-
-   public LocalDateTime getDataCriacao() {
-      return this.dataCriacao;
-   }
-
 }

@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,11 +21,13 @@ public class ProjetoController {
    @Autowired
    ProjetoRepository repository;
 
+   @CrossOrigin(origins = "*")
    @GetMapping(value = MappingConstraints.Projeto.MAIN)
    public List<Projeto> getAll(){
       return repository.findAll();
    }
 
+   @CrossOrigin(origins = "*")
    @GetMapping(value = MappingConstraints.Projeto.MAIN+"/{id}")
    public ResponseEntity<ProjetoDTO> getOne(@PathVariable Long id){
       Optional<Projeto> projeto = repository.findById(id);

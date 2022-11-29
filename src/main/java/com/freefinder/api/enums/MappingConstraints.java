@@ -11,4 +11,8 @@ public final class MappingConstraints {
       public static final String MAIN                         = "projeto";
    }
 
+   public static final class Freelancer {
+      public static final String MAIN                         = "freelancer";
+   }
+
 }
